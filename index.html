@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Irrigation Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Smart Irrigation System</h1>
+    </header>
+    <div class="container">
+      <div class="data-container">
+        <div class="data">
+          🌡 Temperature: <span id="temperature">--</span>°C
+        </div>
+        <div class="data">💧 Humidity: <span id="humidity">--</span>%</div>
+        <div class="data">
+          🌱 Soil Moisture: <span id="soilMoisture">--</span>%
+        </div>
+        <div class="data">
+          🔌 Motor Status: <span id="motorStatus" class="status">--</span>
+        </div>
+        <div class="data">
+          🌧️ Rain: <span id="rainDetected" class="status">--</span>
+        </div>
+        <div class="data">
+          🌊 Water Flow: <span id="flowRate" class="status">--</span>
+        </div>
+        <div class="data">
+          💦 Total Water Consumed:
+          <span id="totalLiters" class="status">--</span>
+        </div>
+      </div>
+
+      <div class="charts-container">
+        <div class="chart-wrapper">
+          <div class="mainGraph">
+            <h2>Soil Moisture Data</h2>
+            <canvas id="soilMoistureChart"></canvas>
+          </div>
+
+          <div class="mainGraph">
+            <h2>Temperature & Humidity Data</h2>
+            <canvas id="tempHumidityChart"></canvas>
+          </div>
+
+          <div class="mainGraph">
+            <h2>Flow Rate Data</h2>
+            <canvas id="flowRateChart"></canvas>
+          </div>
+
+          <div class="mainGraph">
+            <h2>Total Water Consumed (Liters)</h2>
+            <canvas id="totalLitersChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
